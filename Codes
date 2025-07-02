@@ -1,0 +1,17 @@
+#Diccionario Mascotas
+mascotas=[]
+while True:
+  nombre=input("Ingrese el nombre de la mascota: ")
+  edad=int(input("Ingrese la edad de la mascota: "))
+  especie=input("Ingrese la especie de la mascota: ")
+  vacunado=input("¿La mascota está vacunada? (si/no): ")
+  mascota={"nombre":nombre,"edad":edad,"especie":especie,"vacunado":vacunado}
+  mascotas.append(mascota)
+  resp=input(f"Enter para agregar o \"Fin\" para finalizar: ")
+  if resp.upper()=="FIN":
+    break
+print("\nMascotas registradas:")
+for i in range(len(mascotas)):
+  print(f"Mascota {i+1}:")
+  for clave, valor in mascotas[i].items():
+    print(f"{clave} : {valor}")
