@@ -1,0 +1,28 @@
+#Numero secreto
+import os
+os.system("cls")
+import random
+secreto = random.randint(1, 100)
+#jugadores intentan adivinar
+jugador1 = int(input("Jugador 1, adivina el número: "))
+jugador2 = int(input("Jugador 2, adivina el número: "))
+
+if jugador1 == secreto and jugador2 == secreto:
+    print("Ambos jugadores acertaron")
+elif jugador1 == secreto:
+    print("Jugador 1 acertó")
+elif jugador2 == secreto:
+    print("Jugador 2 acertó")
+else: 
+    #Calcular diferencia absoluta
+    diff1 = abs(jugador1 - secreto)
+    diff2 = abs(jugador2 - secreto)
+
+    if diff1 < diff2:
+        print(f"Ningun jugador acerto. Jugador 1 estuvo mas cerca (diferencia: {diff1})")
+    elif diff2 < diff1:
+        print(f"Ningun jugador acerto. Jugador 2 estuvo mas cerca (diferencia: {diff2})")
+    else: 
+        print(f"Ningun jugador acerto. Ambos jugadores estuvieron igual de cerca (diferencia: {diff1})")
+
+        print(f"el jugador secreto era: {secreto}")
