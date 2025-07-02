@@ -1,0 +1,28 @@
+#Pares e impares
+numeros = []
+for i in range(3):
+    numero = int(input(f"Ingrese numero {i+1}: "))
+    numeros.append(numero)
+
+#Contar pares e impares
+pares = 0 
+impares = 0 
+for num in numeros:
+    if num % 2== 0:
+        pares += 1
+    else:
+        impares += 1
+
+        #Calcular Suma
+suma = sum (numeros)
+
+#Resultados
+print(f"se ingresaron {pares} numeros pares.")
+print(f"Se ingresaron {impares} numeros impares.")
+
+if suma > 100:
+    print ("la suma es mayor a 100")
+    if suma % 2 == 0:
+        print ("la suma es par")
+    else:
+        print ("La suma es impar.")
